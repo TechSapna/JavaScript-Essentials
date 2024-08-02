@@ -15,6 +15,4 @@ This repository has all that you need know about Javascript to getting started w
       - Check npm version: `npm -v`
 
 ## Topics Covered
-- [Execution Contexts and Hoisting](https://github.com/TechSapna/Internal-JavaScript-Essentials/tree/main/Execution%20Contexts#notes-execution-contexts-and-hoisting)
-- [Synchronous and Single Threaded Nature of Javascript](https://github.com/TechSapna/Internal-JavaScript-Essentials/tree/main/Single%20Thread%20And%20Synchronosity)
-- [Primitives and Operations](https://github.com/TechSapna/Internal-JavaScript-Essentials/tree/main/Primitives%20And%20Operations)
+- [Execution Contexts and Hoisting](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Execution%20Contexts)
