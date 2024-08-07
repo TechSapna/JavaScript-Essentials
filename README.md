@@ -17,3 +17,6 @@ This repository has all that you need know about Javascript to getting started w
 ## Topics Covered
 - [Execution Contexts and Hoisting](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Execution%20Contexts)
 - [Single Threaded and Synchronous Nature](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Single%20Threaded%20and%20Synchronosity)
+- [Scope Chain](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Scope%20Chain)
+- [Arrow Functions](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Arrow%20Functions)
+- [Objects](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Objects)
