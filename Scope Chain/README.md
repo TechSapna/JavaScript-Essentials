@@ -23,7 +23,8 @@
   - Variables declared with `let` or `const` inside a block.
   - Accessible only within that block.
   - Example:
-    ```if (true) {
+    ```
+    if (true) {
         const blockScopedVar = 'I am a block-scoped variable';
     }
     ```
