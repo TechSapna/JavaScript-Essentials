@@ -26,7 +26,7 @@ Let’s say you have the following code:
 ```let a = 10;
 let b = a; 
 b = 20; 
-console.log(a); // Output: 10```
+console.log(a); // Output: 10 ```
 
 Here, changing `b` doesn’t affect `a`, because they are **independent values**. This is how primitives are copied—**by value**.
 
@@ -42,10 +42,11 @@ When copying a reference type, JavaScript copies the **reference** to the origin
 #### Example:
 Consider the following code:
 
-`let obj1 = { name: 'Alice' };`  
-`let obj2 = obj1;`  
-`obj2.name = 'Bob';`  
-`console.log(obj1.name); // Output: Bob`
+```
+let obj1 = { name: 'Alice' };  
+let obj2 = obj1;
+obj2.name = 'Bob';  
+console.log(obj1.name); // Output: Bob ```
 
 In this example, changing `obj2` also changes `obj1` because they both point to the **same object** in memory. This is because reference types are copied **by reference**.
 
