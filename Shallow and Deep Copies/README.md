@@ -19,14 +19,14 @@ Primitives are simple data types that include:
 When you copy a primitive, a **new value** is created. Changing the new value doesn’t affect the original one.
 
 #### Example:
-Let’s say you have the following code:
-
-```javascript let a = 10;
+```javascript
+let a = 10;
 let b = a; 
 b = 20; 
-console.log(a); // Output: 10 ```
+console.log(a); // Output: 10
+```
 
-Here, changing b doesn’t affect a, because they are **independent values**. This is how primitives are copied—**by value**.
+Here, changing `b` doesn’t affect `a` because they are **independent values**. This is how primitives are copied—**by value**.
 
 ### Reference Types
 Reference types include:
@@ -38,13 +38,12 @@ Reference types include:
 When copying a reference type, JavaScript copies the **reference** to the original value. This means both variables now point to the same object in memory.
 
 #### Example:
-Consider the following code:
-
-```
+```javascript
 let obj1 = { name: 'Alice' };  
 let obj2 = obj1;
 obj2.name = 'Bob';  
-console.log(obj1.name); // Output: Bob ```
+console.log(obj1.name); // Output: Bob
+```
 
 In this example, changing `obj2` also changes `obj1` because they both point to the **same object** in memory. This is because reference types are copied **by reference**.
 
@@ -55,28 +54,26 @@ A **shallow copy** creates a new object or array, but it only copies the **top-l
 ### Creating a Shallow Copy with `Object.assign()`
 
 #### Example:
-Let’s look at this code:
-
-```let original = { name: 'Alice', address: { city: 'Wonderland' } };
+```javascript
+let original = { name: 'Alice', address: { city: 'Wonderland' } };
 let shallowCopy = Object.assign({}, original);
 shallowCopy.address.city = 'Neverland';
-console.log(original.address.city); // Output: Neverland ```
+console.log(original.address.city); // Output: Neverland
+```
 
 In this example, although we copied `original` into `shallowCopy`, both `original` and `shallowCopy` still share the same **address** object. So, changing the `city` property in `shallowCopy` also affects `original`.
 
 ### Shallow Copy of Arrays Using `slice()`
 
 #### Example:
-Here’s how it works with arrays:
-
-``` let arr = [1, [2, 3]]; 
+```javascript
+let arr = [1, [2, 3]]; 
 let shallowArr = arr.slice();  
 shallowArr[1][0] = 99;
-console.log(arr[1][0]); // Output: 99 ```
+console.log(arr[1][0]); // Output: 99
+```
 
 Here, `arr` and `shallowArr` still share the inner array `[2, 3]`. Thus, changing the inner array in `shallowArr` also changes it in `arr`.
-
----
 
 ## What is a Deep Copy?
 
@@ -85,11 +82,12 @@ A **deep copy** creates a completely new object or array, including **all nested
 ### Deep Copy Using `JSON.stringify()` and `JSON.parse()`
 
 #### Example:
-Consider this code:
-``` let original = { name: 'Alice', address: { city: 'Wonderland' } };
+```javascript
+let original = { name: 'Alice', address: { city: 'Wonderland' } };
 let deepCopy = JSON.parse(JSON.stringify(original));
 deepCopy.address.city = 'Neverland';
-console.log(original.address.city); // Output: Wonderland ```
+console.log(original.address.city); // Output: Wonderland
+```
 
 Here, the nested `address` object is fully copied, so changes to `deepCopy` do not affect `original`.
 
@@ -98,21 +96,23 @@ However, be cautious: this method **loses functions** and does not handle **spec
 ### Deep Copy Using a Recursive Function
 
 #### Example:
-Here’s an example using a custom recursive function:
-
-```function deepClone(obj) {
-      if (obj === null || typeof obj !== 'object') return obj;
-      let copy = Array.isArray(obj) ? [] : {};  
-      for (let key in obj) {  
-        copy[key] = deepClone(obj[key]);
-      }
-      return copy;`  
+```javascript
+function deepClone(obj) {
+    if (obj === null || typeof obj !== 'object') return obj;
+    let copy = Array.isArray(obj) ? [] : {};  
+    for (let key in obj) {  
+        if (obj.hasOwnProperty(key)) {
+            copy[key] = deepClone(obj[key]);
+        }
+    }
+    return copy;
 }
 
 let original = { name: 'Alice', address: { city: 'Wonderland' } };  
 let deepCopy = deepClone(original);
 deepCopy.address.city = 'Neverland';  
-console.log(original.address.city); // Output: Wonderland ```
+console.log(original.address.city); // Output: Wonderland
+```
 
 In this example, the custom `deepClone` function ensures that all nested objects and arrays are copied independently.
 
@@ -121,11 +121,9 @@ In this example, the custom `deepClone` function ensures that all nested objects
 For deep copying, you can also use popular libraries like Lodash, which provides a `_.cloneDeep()` method that handles various edge cases.
 
 #### Example:
-Here’s how you can use Lodash:
-
-`let deepCopy = _.cloneDeep(original);`
-
----
+```javascript
+let deepCopy = _.cloneDeep(original);
+```
 
 ## Call by Value vs. Call by Reference
 
@@ -133,33 +131,31 @@ When passing variables to functions, **primitives** are passed **by value**, and
 
 ### Call by Value Example:
 
-Consider this example:
-
-``` function modifyPrimitive(value) {
-      value = 100;
+```javascript
+function modifyPrimitive(value) {
+    value = 100;
 }
 
 let num = 50;  
 modifyPrimitive(num);  
-console.log(num); // Output: 50 ```
+console.log(num); // Output: 50
+```
 
 In this case, `num` remains unchanged because it is passed **by value** to the function.
 
 ### Call by Reference Example:
 
-Now, take a look at this example:
+```javascript
+function modifyName(obj) {
+    obj.name = 'Changed';
+}
 
-``` function modifyName(obj) {
-obj.name = 'Changed';
-} ```
-
-``` let person = { name: 'Alice' }; 
+let person = { name: 'Alice' }; 
 modifyName(person);
-console.log(person.name); // Output: Changed ```
+console.log(person.name); // Output: Changed
+```
 
 Here, `person` is passed **by reference**, so changes inside the function affect the original object.
-
----
 
 ## Key Takeaways
 
