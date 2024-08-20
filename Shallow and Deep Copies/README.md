@@ -21,12 +21,12 @@ When you copy a primitive, a **new value** is created. Changing the new value do
 #### Example:
 Let’s say you have the following code:
 
-```javascript let a = 10;
+javascript let a = 10;
 let b = a; 
 b = 20; 
-console.log(a); // Output: 10 ```
+console.log(a); // Output: 10
 
-Here, changing `b` doesn’t affect `a`, because they are **independent values**. This is how primitives are copied—**by value**.
+Here, changing b doesn’t affect a, because they are **independent values**. This is how primitives are copied—**by value**.
 
 ### Reference Types
 Reference types include:
