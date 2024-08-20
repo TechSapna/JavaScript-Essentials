@@ -24,7 +24,7 @@ Let’s say you have the following code:
 ```javascript let a = 10;
 let b = a; 
 b = 20; 
-console.log(a); // Output: 10```
+console.log(a); // Output: 10 ```
 
 Here, changing b doesn’t affect a, because they are **independent values**. This is how primitives are copied—**by value**.
 
@@ -47,8 +47,6 @@ obj2.name = 'Bob';
 console.log(obj1.name); // Output: Bob ```
 
 In this example, changing `obj2` also changes `obj1` because they both point to the **same object** in memory. This is because reference types are copied **by reference**.
-
----
 
 ## What is a Shallow Copy?
 
