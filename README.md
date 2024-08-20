@@ -21,6 +21,7 @@ This repository has all that you need know about Javascript to getting started w
 - [Scope Chain](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Scope%20Chain)
 - [Arrow Functions](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Arrow%20Functions)
 - [Objects](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Objects)
-- [Arrays & Array Methods](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Arrays)
+- [Arrays & Array Methods - Map, filter, Reduce](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Arrays)
 - [Destructuring in JS](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Destructuring)
+- [Shallow and Deep Copies](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Shallow%20and%20Deep%20Copies)
   
