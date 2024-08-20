@@ -3,8 +3,6 @@
 ## Overview
 Understanding how JavaScript copies variables, especially objects and arrays, is crucial when writing efficient and error-free code. In this guide, we’ll break down the differences between **shallow copies** and **deep copies**, explore how they work with **primitives** and **reference types**, and look at common pitfalls in JavaScript.
 
--
-
 ## Primitives vs. Reference Types
 
 ### Primitives
