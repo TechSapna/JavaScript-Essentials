@@ -59,7 +59,7 @@ A **shallow copy** creates a new object or array, but it only copies the **top-l
 #### Example:
 Let’s look at this code:
 
-``` let original = { name: 'Alice', address: { city: 'Wonderland' } };
+```let original = { name: 'Alice', address: { city: 'Wonderland' } };
 let shallowCopy = Object.assign({}, original);
 shallowCopy.address.city = 'Neverland';
 console.log(original.address.city); // Output: Neverland ```
