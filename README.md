@@ -24,4 +24,5 @@ This repository has all that you need know about Javascript to getting started w
 - [Arrays & Array Methods - Map, filter, Reduce](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Arrays)
 - [Destructuring in JS](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Destructuring)
 - [Shallow and Deep Copies](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Shallow%20and%20Deep%20Copies)
+- [Callbacks](https://github.com/TechSapna/JavaScript-Essentials/tree/main/Callbacks)
   
