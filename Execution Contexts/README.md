@@ -34,7 +34,7 @@ function greet() {
 #### Example Code Snippet
 - **Simple Code Example**:
 
-```javascript
+```javascript-run
 var number = 10;
 
 function greet() {
