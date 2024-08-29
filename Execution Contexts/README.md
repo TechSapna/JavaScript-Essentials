@@ -1,4 +1,4 @@
-## Notes: Execution Contexts and Hoisting
+## Execution Contexts and Hoisting
 
 #### Basic Concepts
 - **Expressions**: Everything in JavaScript is an expression, either as a name/value pair or an object.
