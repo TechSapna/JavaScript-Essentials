@@ -34,7 +34,7 @@ function greet() {
 #### Example Code Snippet
 - **Simple Code Example**:
 
-```javascript-run
+```javascript-cp
 var number = 10;
 
 function greet() {
@@ -85,7 +85,7 @@ function y() {
 
 - **Example**:
 
-```javascript
+```javascript-cp
 console.log(myVar); // undefined
 var myVar = 10;
 
