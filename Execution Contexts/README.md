@@ -1,7 +1,7 @@
 # Execution Contexts and Hoisting
 
 ## Basic Concepts
-- **Expressions**: Everything in JavaScript is an expression, either as a name/value pair or an object.
+- **Expressions**: Everything in JavaScript is an expression - check, either as a name/value pair or an object.
 
 ```javascript
 var number = 10; // name/value pair: number = 10
